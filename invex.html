@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Invoice</title>
+  </head>
+  <body>
+    <header>
+      <div class="bg-blue-900 text-white py-4">
+        <p class="text-center">Please inter the data</p>
+      </div>
+      <div class="flex items-center w-3/4 mx-auto my-3">
+        <p class="border py-6 px-4 bg-slate-300">Boyer Details</p>
+        <textarea
+          class="border"
+          id="boyer-input-field"
+          cols="70"
+          rows="3"
+        ></textarea>
+        <button class="border py-6 px-4 bg-blue-700" id="submit-btn">
+          Submit
+        </button>
+      </div>
+      <div class="bg-blue-900 text-white py-4">
+        <p class="text-center">Enter the item details</p>
+      </div>
+      <div class="w-2/4 mx-auto my-4">
+        <div class="flex">
+          <p class="border py-3 px-4 w-36 bg-slate-300">Item name</p>
+          <input type="text" id="name-field" class="border w-full" />
+        </div>
+        <div class="flex">
+          <p class="border py-3 w-36 px-4 bg-slate-300">Price</p>
+          <input type="number" id="price-field" class="border w-full" />
+        </div>
+        <div class="flex">
+          <p class="border py-3 w-36 px-4 bg-slate-300">Quantity</p>
+          <input type="number" id="quantity-field" class="border w-full" />
+        </div>
+        <div class="text-center">
+          <button class="border bg-blue-700 text-white p-4 my-4" id="add-btn">
+            add
+          </button>
+        </div>
+      </div>
+      <marquee behavior="" direction="left"
+        >You can add more items using input fields.</marquee
+      >
+    </header>
+    <main>
+      <section>
+        <p>Invoice:#653778</p>
+        <hr />
+        <div class="grid grid-cols-3 m-4 gap-4">
+          <div class="bg-blue-900 text-white h-20 p-2">
+            <p>date: <span id="date"></span></p>
+          </div>
+          <div class="bg-blue-900 text-white p-2">
+            <p>
+              Invoice To <br />
+              <span id="invoice-text"></span>
+            </p>
+          </div>
+          <div class="bg-blue-900 text-white h-20 p-2">
+            <p>sailer: <br />abcd inc hellow@apexo.com 16 ctg, Bangladesh</p>
+          </div>
+        </div>
+        <div>
+          <table class="w-full table-fixed">
+            <thead>
+              <tr class="border">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="add-table"></tbody>
+            <tbody class="border-t-4">
+              <tr>
+                <td></td>
+                <td></td>
+                <th class="text-right">Sub Total:$</th>
+                <td>
+                  <span id="sub-total" class="text-2xl font-bold"></span>
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td></td>
+                <th class="text-right">Tex:$</th>
+                <td><span id="tex" class="text-2xl font-bold"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <th class="text-right">Grand Total:$</th>
+                <td>
+                  <span id="grand-total" class="text-2xl font-bold"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <hr />
+        <div class="my-10 text-center text-5xl font-bold">
+          <p>Grand total</p>
+          <p>$ <span id="grand">00</span></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
